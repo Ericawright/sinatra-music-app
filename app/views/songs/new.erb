@@ -1,9 +1,9 @@
-<% if @message && @message.errors.any? %>
+<% if @song && @song.errors.any? %>
   <div>
     <strong>Some issues with your song, please fix them:</strong>
     <ul>
-      <% @message.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+      <% @song.errors.full_songs.each do |song| %>
+        <li><%= song %></li>
       <% end %>
     </ul>
   </div>
@@ -28,5 +28,4 @@
   </div>
 </form>
 
-<!-- <br/>
-<a href="/messages">View Messages</a> -->
+<a href="/songs">View Songs</a>

@@ -6,14 +6,15 @@
   <%=@song.title  %>
 </p>
 <p>
-  <%=@song.url%>
+
+  <a href=<%=@song.url%>><%=@song.url%></a>
 </p>
 <p>
   Posted on: <%=@song.created_at%>
 </p>
 <hr/>
 <p>
-  Other Post From This Author
+  Other Posts From This Author
 </p>
 
   <%Song.where(:author => @song.author).where.not(:id => @song.id).all.each do |song|%> 
@@ -22,3 +23,6 @@
     <br/>
     <br/>
   <%end%>
+
+  <hr/>
+<a href="/songs">Back to All Songs</a>
