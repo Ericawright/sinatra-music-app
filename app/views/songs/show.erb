@@ -1,0 +1,24 @@
+<p>
+  Author: <%=@song.author %>
+</p>
+
+<p>
+  <%=@song.title  %>
+</p>
+<p>
+  <%=@song.url%>
+</p>
+<p>
+  Posted on: <%=@song.created_at%>
+</p>
+<hr/>
+<p>
+  Other Post From This Author
+</p>
+
+  <%Song.where(:author => @song.author).where.not(:id => @song.id).all.each do |song|%> 
+    <%=song.title%>
+    <%=song.url%>
+    <br/>
+    <br/>
+  <%end%>
