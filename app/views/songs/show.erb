@@ -5,24 +5,27 @@
 <p>
   <%=@song.title  %>
 </p>
-<p>
 
+<p>
   <a href=<%=@song.url%>><%=@song.url%></a>
 </p>
+
 <p>
   Posted on: <%=@song.created_at%>
 </p>
+
 <hr/>
 <p>
   Other Posts From This Author
 </p>
 
-  <%Song.where(:author => @song.author).where.not(:id => @song.id).all.each do |song|%> 
-    <%=song.title%>
-    <%=song.url%>
-    <br/>
-    <br/>
-  <%end%>
+<%Song.where(:author => @song.author).where.not(:id => @song.id).all.each do |song|%> 
+  <%=song.title%>
+  <br/>
+  <a href=<%=@song.url%>><%=song.url%></a>
+  <br/>
+  <br/>
+<%end%>
 
-  <hr/>
+<hr/>
 <a href="/songs">Back to All Songs</a>

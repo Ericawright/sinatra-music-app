@@ -16,3 +16,35 @@ div.song {
 p {
   text-align: center;
 }
+
+button {
+  position: fixed;
+  top: 30px;
+  left: 5px;
+  width: 200px;
+  height: auto;
+  background: #b5b5b5;
+  background-image: -webkit-linear-gradient(top, #b5b5b5, #b82b2b);
+  background-image: -moz-linear-gradient(top, #b5b5b5, #b82b2b);
+  background-image: -ms-linear-gradient(top, #b5b5b5, #b82b2b);
+  background-image: -o-linear-gradient(top, #b5b5b5, #b82b2b);
+  background-image: linear-gradient(to bottom, #b5b5b5, #b82b2b);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+button:hover {
+  background: #006eb3;
+  background-image: -webkit-linear-gradient(top, #006eb3, #b5b5b5);
+  background-image: -moz-linear-gradient(top, #006eb3, #b5b5b5);
+  background-image: -ms-linear-gradient(top, #006eb3, #b5b5b5);
+  background-image: -o-linear-gradient(top, #006eb3, #b5b5b5);
+  background-image: linear-gradient(to bottom, #006eb3, #b5b5b5);
+  text-decoration: none;
+}
