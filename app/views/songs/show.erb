@@ -1,13 +1,17 @@
 <p>
-  Author: <%=@song.author %>
+  Artist: <%=@song.artist %>
 </p>
 
 <p>
-  <%=@song.title  %>
+  <%=@song.title %>
 </p>
 
 <p>
   <a href=<%=@song.url%>><%=@song.url%></a>
+</p>
+
+<p>
+  Posted by: <%=User.where(:id => @song.user_id).first.username%>
 </p>
 
 <p>
@@ -16,10 +20,10 @@
 
 <hr/>
 <p>
-  Other Posts From This Author
+  Other Posts From This User
 </p>
 
-<%Song.where(:author => @song.author).where.not(:id => @song.id).all.each do |song|%> 
+<%Song.where(:user_id => @song.user_id).where.not(:id => @song.id).all.each do |song|%> 
   <%=song.title%>
   <br/>
   <a href=<%=@song.url%>><%=song.url%></a>

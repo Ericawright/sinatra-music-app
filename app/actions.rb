@@ -20,6 +20,7 @@ post '/songs' do
     title: params[:title],
     artist:  params[:artist],
     url:   params[:url],
+    user_id: session[:user_id]
   )
   if @song.save
     redirect '/songs'
@@ -45,6 +46,8 @@ post '/users/new' do
     password:  params[:password]
   )
   if @user.save
+    @current_user = User.where(username: params[:username], password:  params[:password]).first
+    session[:user_id] = @current_user.id
     redirect 'users/profile'
   else
     erb :'user/new'
