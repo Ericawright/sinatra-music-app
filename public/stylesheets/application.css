@@ -1,7 +1,7 @@
-body {
+/*body {
   font-family: Verdana;
   font-size: 1em; 
-}
+}*/
 body h1 {
   color: #000000; 
 }
@@ -11,18 +11,18 @@ div.song {
   margin-right: auto;
   padding: 25px;
   border: 25px solid grey;
-  /*clear: both;*/
 }
 p {
   text-align: center;
+  font-size: 2em;
 }
 
-button {
-  position: fixed;
-  top: 30px;
-  left: 5px;
+/*a.btn {
+  float: left;
+  clear: both;
   width: 200px;
   height: auto;
+  margin: 1em;
   background: #b5b5b5;
   background-image: -webkit-linear-gradient(top, #b5b5b5, #b82b2b);
   background-image: -moz-linear-gradient(top, #b5b5b5, #b82b2b);
@@ -37,14 +37,10 @@ button {
   font-size: 20px;
   padding: 10px 20px 10px 20px;
   text-decoration: none;
-}
+}*/
 
-button:hover {
-  background: #006eb3;
-  background-image: -webkit-linear-gradient(top, #006eb3, #b5b5b5);
-  background-image: -moz-linear-gradient(top, #006eb3, #b5b5b5);
-  background-image: -ms-linear-gradient(top, #006eb3, #b5b5b5);
-  background-image: -o-linear-gradient(top, #006eb3, #b5b5b5);
-  background-image: linear-gradient(to bottom, #006eb3, #b5b5b5);
-  text-decoration: none;
+a.btn.fixed {
+  position: fixed;
+  top: 30px;
+  left: 5px;
 }
